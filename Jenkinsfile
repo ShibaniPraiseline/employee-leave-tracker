@@ -1,36 +1,26 @@
 pipeline {
     agent any
-
-    tools {
-        nodejs "NodeJS_20"  // Configure this in Jenkins global tools
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/ShibaniPraiseline/employee-leave-tracker.git'
+                git 'https://github.com/ShibaniPraiseline/employee-leave-tracker.git'
+            }
             }
         }
-
-        stage('Install Dependencies') {
-            steps {
-                bat "npm install"
-            }
-        }
-
         stage('Build') {
             steps {
-                bat "npm run build"
+                sh 'javac HelloWorld.java'
             }
         }
-    }
-
-    post {
-        success {
-            echo "React project built successfully!"
+        stage('Test') {
+            steps {
+                sh 'java HelloWorld'
+            }
         }
-        failure {
-            echo "Build failed!"
+        stage('Deploy') {
+            steps {
+                echo 'Deploying Application...'
+            }
         }
     }
 }
