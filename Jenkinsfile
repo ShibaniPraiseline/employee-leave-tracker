@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs "NodeJS_20"   // The NodeJS installation you defined in Jenkins
+        nodejs "NodeJS_20"   // the NodeJS you configured in Jenkins
     }
 
     stages {
@@ -16,28 +16,31 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 echo "Installing dependencies..."
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Build') {
             steps {
-                echo "Building React app..."
-                sh 'npm run build'
+                echo "Building React App..."
+                bat 'npm run build'
             }
         }
 
         stage('Deploy') {
+            when {
+                expression { return env.BRANCH_NAME == 'main' }
+            }
             steps {
                 echo "Deploying to GitHub Pages..."
-                sh 'npm run deploy'
+                bat 'npm run deploy'
             }
         }
     }
 
     post {
         success {
-            echo "✅ Build & Deployment Successful!"
+            echo "✅ Build and Deploy Successful!"
         }
         failure {
             echo "❌ Build Failed!"
