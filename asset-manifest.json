@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.a0000af4.css",
-    "main.js": "/static/js/main.e60fb923.js",
-    "static/js/453.1f7a3128.chunk.js": "/static/js/453.1f7a3128.chunk.js",
-    "index.html": "/index.html",
-    "main.a0000af4.css.map": "/static/css/main.a0000af4.css.map",
-    "main.e60fb923.js.map": "/static/js/main.e60fb923.js.map",
-    "453.1f7a3128.chunk.js.map": "/static/js/453.1f7a3128.chunk.js.map"
+    "main.css": "/employee-leave-tracker/static/css/main.a0000af4.css",
+    "main.js": "/employee-leave-tracker/static/js/main.0eebf35c.js",
+    "static/js/453.1f7a3128.chunk.js": "/employee-leave-tracker/static/js/453.1f7a3128.chunk.js",
+    "index.html": "/employee-leave-tracker/index.html",
+    "main.a0000af4.css.map": "/employee-leave-tracker/static/css/main.a0000af4.css.map",
+    "main.0eebf35c.js.map": "/employee-leave-tracker/static/js/main.0eebf35c.js.map",
+    "453.1f7a3128.chunk.js.map": "/employee-leave-tracker/static/js/453.1f7a3128.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a0000af4.css",
-    "static/js/main.e60fb923.js"
+    "static/js/main.0eebf35c.js"
   ]
 }
